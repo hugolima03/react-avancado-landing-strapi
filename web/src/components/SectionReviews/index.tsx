@@ -7,6 +7,7 @@ import ReviewCard from 'components/ReviewCard'
 
 import * as S from './styles'
 import { SectionReviewsProps } from 'types/api'
+import { getImageUrl } from 'utils/getImageUrl'
 
 const settings = {
   dots: true,
@@ -40,7 +41,7 @@ const SectionReviews = ({ title, reviews }: SectionReviewsProps) => (
             <ReviewCard
               key={name}
               name={name}
-              image={photo.url}
+              photo={photo.url}
               description={text}
               id={index}
             />

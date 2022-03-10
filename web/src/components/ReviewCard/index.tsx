@@ -7,11 +7,11 @@ import * as S from './styles'
 type Props = {
   id: number
   name: string
-  image: string
+  photo: string
   description: string
 }
 
-const ReviewCard: React.FC<Props> = ({ id, name, image, description }) => {
+const ReviewCard: React.FC<Props> = ({ id, name, photo, description }) => {
   useEffect(() => {
     const texts = document.querySelectorAll('p.description')
 
@@ -31,11 +31,7 @@ const ReviewCard: React.FC<Props> = ({ id, name, image, description }) => {
   return (
     <S.Card>
       <S.User>
-        <S.Image
-          src={getImageUrl('/uploads/douglas_lopes_5c3cea8c4a_a972d9e880.jpeg')}
-          alt={name}
-          loading="lazy"
-        />
+        <S.Image src={getImageUrl(photo)} alt={name} loading="lazy" />
         <S.Name>{name}</S.Name>
       </S.User>
       <S.Text>
