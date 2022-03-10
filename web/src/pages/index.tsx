@@ -13,12 +13,14 @@ import SectionFaq from 'components/SectionFaq'
 import Footer from 'components/Footer'
 import JsonSchema from 'components/JsonSchema'
 import { GetStaticProps } from 'next'
+
 import client from 'graphql/client'
 import GET_LANDING_PAGE from 'graphql/queries/getLandingPage'
+import { LandingPageProps } from 'types/api'
 
-const Index = () => (
+const Index = ({ logo }: LandingPageProps) => (
   <>
-    <SectionHero />
+    <SectionHero logo={logo} />
     <SectionAboutProject />
     <SectionTech />
     <SectionConcepts />
