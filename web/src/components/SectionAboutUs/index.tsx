@@ -12,7 +12,7 @@ const SectionAboutUs = ({ title, authors }: SectionAboutUsProps) => (
     <Heading reverseColor>{title}</Heading>
 
     <S.Content>
-      {authors.reverse().map((profile) => (
+      {authors.map((profile) => (
         <ProfileCard
           key={profile.name}
           name={profile.name}
